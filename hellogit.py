@@ -4,4 +4,5 @@ print("ESTOY LLEVANDO CURSOS DE UDEMY PARA APRENDER GIT!")
 
 print("agregare esta nueva linea")
 
+print("solucionar problema de errores con la combinacion de ramas")
 print("AGREGUE OTRA NUEVA LINEA PARA PODER HACER PRACTICAS")
