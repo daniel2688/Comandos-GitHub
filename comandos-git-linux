@@ -117,16 +117,22 @@ git branch -D "nombre de la rama"
 # para eliminar la rama sin importar si sus cambios se han fusionado o no
 
 ----------------------------------------------------------------------------------------
-git remote add origin https://github.com/danie2688/test-repository.git
+git remote add origin https://github.com/daniel2688/prueba1.git
 # para que nosotros podamos indicar si es que vamos a tener un servidor remoto para subir nuestros cambios.
 # le indicamos de donde nosotros vamos a obtener nuestro codigo y a donde vamos a subir los cambios realizados.
 
-git push -u origin "nombre de la rama"
+git push -u origin "nombre de la rama" o git push --set-upstream origin "nombre de la rama"
 # si queremos subir la rama en el repositorio GitHub estando en cualquier rama
 # adicional se configuro una relación de seguimiento entre la rama local y la rama remota
 # usariamos ahora solo "git push" en caso de hacer un push directo
 
-git push origin --delete "nombre de la rama"
+git config --global push.default simple
+# para que las ramas locales que tengan una rama remota con el mismo nombre seran configuradas automaticamente
+# para realizar push a esta rama remota
+
+
+
+git push origin --delete "nombre de la rama" o main
 # para elimnar la rama en el repositorio GitHub
 
 git push
