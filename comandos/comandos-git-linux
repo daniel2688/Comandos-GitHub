@@ -5,6 +5,9 @@ git config --global user.email danicor2688@gmail.com
 git config --list
 # valida los datos que configuraste al inicio
 
+git remote set-url origin "URL del repositorio remoto en GitHub"
+# esto ayuda a que cada repositorio local utilice una URL correcta para interactuar con el repositorio remoto origin
+
 git config --global user.email 117961516+daniel2688@users.noreply.github.com
 # para que GitHub no muestre mi correo personal y use este correo especial para las operaciones de Git
 
