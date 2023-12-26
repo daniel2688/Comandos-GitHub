@@ -5,8 +5,8 @@ git config --global user.email danicor2688@gmail.com
 git config --list
 # valida los datos que configuraste al inicio
 
-git remote set-url origin "URL del repositorio remoto en GitHub"
-# esto ayuda a que cada repositorio local utilice una URL correcta para interactuar con el repositorio remoto origin
+git remote set-url origin https://github.com/daniel2688/Comandos-GitHub-Linux.git
+# para actualizar la URL del remoto existente llamado "origin"
 
 git config --global user.email 117961516+daniel2688@users.noreply.github.com
 # para que GitHub no muestre mi correo personal y use este correo especial para las operaciones de Git
@@ -151,13 +151,16 @@ ls -a
 touch archivo.txt
 # crear archivo.txt
 
+touch archivo.txt carpeta/carpeta2
+# se crea el archivo.txt y se mueve a la carpeta indicada
+
 cat archivo.txt
-# para leer el contenido del archivo
+# imprime el contenido del archivo
 
 cp -r archivo.txt archivo1.txt
 # copia todos los archivos de archivo.txt a archivo2.txt
 
-nano archivo.txt o vim archivotest.txt
+nano archivo.txt o vim archivo.txt
 # escribir en el archivo.txt y salir con Ctrl+x
 
 rm archivo.txt
@@ -166,8 +169,58 @@ rm archivo.txt
 rm -rf archivo.txt
 # elimina carpeta sin necesidad de dar confiramcion
 
+rm archivo.txt/carpeta
+# elimina archivo.txt dentro de la subcarpeta indicada
+
 mv archivo.txt archivo1.txt
-# cambiar el nombre del archivo
+# cambiar el nombre del archivo o mueve el archivo en la carpeta indicada
 
+cd archivo; mkdir practica1; pwd
+# ejecuta multiples comandos
 
+mkdir -p carpeta1/carpeta2/carpeta3
+# crea todos los directorios de manera recursiva, aun asi no exita carpeta1
+
+cd carpeta; rm -rf carpeta
+# se coloca en la carpeta y procede eliminar el archivo de forma recursiva
+
+ll carpeta o ls -l carpeta
+# se utiliza para listar información detallada sobre los archivos y directorios dentro de la carpeta
+# indica permisos,  numero de enlaces, propietario, grupo, tamaño, fecha de modificacion, nombre de archivo
+
+echo "texto que deseo imprimir">archivo.txt
+# para escribir el texto especificado "texto que deseo imprimir" en el archivo llamado "archivo.txt"
+
+echo "texto que deseo imprimir 2">>archivo.txt
+# para escribir una segunda linea en el"archivo.txt"
+
+vi test.txt           para guar los cambios y salir (save + quit):   :wq
+# abre un editor en la consola
+
+ls /etc/*release*
+# proporciona información detallada sobre la distribución y la versión específica de Ubuntu que estás utilizando
+
+cat /etc/*release*
+# muestra el contenido de todos los archivos relacionados con la información de la versión y la distribución presentes en el directorio
+
+sudo ls /root
+# para ver los archivos en el directorio root
+
+tree "carpeta"
+# se utiliza para mostrar la estructura de directorios y archivos de manera jerárquica en forma de árbol.
+
+mv *.sh o 
+mv *.txt
+# mueve los archivos que terminan con ese valor
+
+Ctrl + K 
+# para eliminar todo el contenido del archivo
+
+COMANDOS BASH:
+---------------
+crear script.sh
+comentar con nano el script.sh con: #! /bin/bash, para luego ejecutar ./script.sh
+
+dpkg -l | grep git o aws o terraform
+# muestra informacion sobre los paquetes instalados en el sistema relacionados con git.
 
