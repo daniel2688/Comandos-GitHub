@@ -8,6 +8,9 @@ git config --list
 git remote set-url origin https://github.com/daniel2688/Comandos-GitHub-Linux.git
 # para actualizar la URL del remoto existente llamado "origin"
 
+git remote remove origin
+# para eliminar el remoto existente llamado "origin"
+
 git config --global user.email 117961516+daniel2688@users.noreply.github.com
 # para que GitHub no muestre mi correo personal y use este correo especial para las operaciones de Git
 
@@ -142,6 +145,8 @@ git remote -v
 # muestra las URLs de los repositorios remotos vinculados a tu repositorio local. 
 # La salida incluirá tanto la URL para recuperar (fetch) como la URL para enviar (push) cambios al repositorio remoto
 
+alias "nombre del alias"="git lig --all --graph --decorate --oneline"
+# para crear un alias para ver el historial de cambios
 
 COMANDOS PARA USO DE LINUX:
 --------------------------------------------------
