@@ -148,6 +148,24 @@ git remote -v
 alias "nombre del alias"="git lig --all --graph --decorate --oneline"
 # para crear un alias para ver el historial de cambios
 
+git tag -a v1.0 -m "Agregar el mensaje para el tag" Agregar el commit
+# para crear un tag.
+
+git show-ref --tags
+# para ver los tags referenciados.
+
+git push origin v1.0
+# para subir un tag al repositorio remoto.
+
+git push origin --tags
+# para subir todos los tags al repositorio remoto.
+
+git push origin --delete v1.0
+# para eliminar un tag del repositorio remoto.
+
+history
+# para ver el historial de comandos ejecutados
+
 COMANDOS PARA USO DE LINUX:
 --------------------------------------------------
 ls -a
