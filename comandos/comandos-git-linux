@@ -18,6 +18,10 @@ git config --global -e
 # abrirá el archivo de configuración global en el editor de texto predeterminado de tu sistema
 # para realizar cambios en la configuración directamente del archivo .gitconfig
 
+git remote rename origin "nuevo nombre para el origin"
+# para cambiar el nombre del remoto existente llamado "origin" a otro nombre
+
+
 COMANDOS PARA USO DE GIT: (git add prepara los cambios de mi archivo actual y sube los archivos al staggin area)
 -------------------------
 
@@ -133,8 +137,6 @@ git config --global push.default simple
 # para que las ramas locales que tengan una rama remota con el mismo nombre seran configuradas automaticamente
 # para realizar push a esta rama remota
 
-
-
 git push origin --delete "nombre de la rama" o main
 # para elimnar la rama en el repositorio GitHub
 
@@ -145,7 +147,7 @@ git remote -v
 # muestra las URLs de los repositorios remotos vinculados a tu repositorio local. 
 # La salida incluirá tanto la URL para recuperar (fetch) como la URL para enviar (push) cambios al repositorio remoto
 
-alias "nombre del alias"="git lig --all --graph --decorate --oneline"
+alias "nombre del alias"="git log --all --graph --decorate --oneline"
 # para crear un alias para ver el historial de cambios
 
 git tag -a v1.0 -m "Agregar el mensaje para el tag" Agregar el commit
@@ -160,11 +162,44 @@ git push origin v1.0
 git push origin --tags
 # para subir todos los tags al repositorio remoto.
 
-git push origin --delete v1.0
+git push origin --delete v1.0 o git tag -d v1.0
 # para eliminar un tag del repositorio remoto.
 
+git tag --delete v1.0 o git tag -d v1.0
+# para eliminar un tag del repositorio local.
+
 history
-# para ver el historial de comandos ejecutados
+# para ver el historial de comandos ejecutados.
+
+git show-branch
+# para ver las ramas y sus commits.
+
+git reset --hard <commit>
+# se utiliza para restablecer el estado de tu directorio de trabajo y el índice a un commit específico.
+
+git reset --soft <commit>
+# se utiliza para restablecer el estado de tu directorio de trabajo a un commit específico, manteniendo los cambios locales.
+
+git stash push -m "Mensaje descriptivo"
+# para guardar los cambios locales en una "stash area" con un mensaje descriptivo.
+
+git stash list
+# listar los stashes.
+
+git stash apply o git stash apply stash@{n}   # para aplicar uno en especifico.
+# Aplicar el stash más reciente.
+
+git clean
+# se utiliza para eliminar archivos no rastreados del directorio de trabajo.
+
+git clean --dry-run
+# para verificar qué archivos se eliminarán sin efectuar la eliminación.
+
+git clean -f
+# se utiliza para eliminar archivos no rastreados del directorio de trabajo en Git.
+
+gitk
+# para ver el historial de cambios en una interfaz grafica.
 
 COMANDOS PARA USO DE LINUX:
 --------------------------------------------------
